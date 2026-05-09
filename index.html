@@ -25,102 +25,186 @@ document.addEventListener('DOMContentLoaded', function() {
     let c1 = 0;
     imgs[0].src = pics[c1];
     setInterval(function() {
+        let minGap = 25 + Math.floor(Math.random() * 30);
         let n = Math.floor(Math.random() * 80);
-        for (let t = 0; t < 10; t++) {
-            if (Math.abs(n - c1) >= 12) break;
+        for (let t = 0; t < 15; t++) {
+            if (Math.abs(n - c1) >= minGap) break;
             n = Math.floor(Math.random() * 80);
         }
         c1 = n;
+        // 先彻底淡出旧图片
         imgs[0].style.opacity = '0';
+        // 等200ms让旧图片完全消失
         setTimeout(function() {
-            imgs[0].src = pics[c1];
-            imgs[0].style.opacity = '1';
-        }, 300);
+            // 预加载新图片
+            var preImg = new Image();
+            preImg.src = pics[c1];
+            // 新图片加载完后才显示
+            preImg.onload = function() {
+                imgs[0].src = pics[c1];
+                imgs[0].style.opacity = '1';
+            };
+            // 兜底：1.5秒后强制显示
+            setTimeout(function() {
+                imgs[0].src = pics[c1];
+                imgs[0].style.opacity = '1';
+            }, 1500);
+        }, 200);
     }, 10000);
     
     // ========== 第2张 ==========
-    let c2 = 20;
+    let c2 = 15;
     imgs[1].src = pics[c2];
     setInterval(function() {
+        let minGap = 25 + Math.floor(Math.random() * 30);
         let n = Math.floor(Math.random() * 80);
-        for (let t = 0; t < 10; t++) {
-            if (Math.abs(n - c2) >= 12) break;
+        for (let t = 0; t < 15; t++) {
+            if (Math.abs(n - c2) >= minGap) break;
             n = Math.floor(Math.random() * 80);
         }
         c2 = n;
+        // 先彻底淡出旧图片
         imgs[1].style.opacity = '0';
+        // 等200ms让旧图片完全消失
         setTimeout(function() {
-            imgs[1].src = pics[c2];
-            imgs[1].style.opacity = '1';
-        }, 300);
+            // 预加载新图片
+            var preImg = new Image();
+            preImg.src = pics[c2];
+            // 新图片加载完后才显示
+            preImg.onload = function() {
+                imgs[1].src = pics[c2];
+                imgs[1].style.opacity = '1';
+            };
+            // 兜底：1.5秒后强制显示
+            setTimeout(function() {
+                imgs[1].src = pics[c2];
+                imgs[1].style.opacity = '1';
+            }, 1500);
+        }, 200);
     }, 11000);
     
     // ========== 第3张 ==========
-    let c3 = 40;
+    let c3 = 30;
     imgs[2].src = pics[c3];
     setInterval(function() {
+        let minGap = 25 + Math.floor(Math.random() * 30);
         let n = Math.floor(Math.random() * 80);
-        for (let t = 0; t < 10; t++) {
-            if (Math.abs(n - c3) >= 12) break;
+        for (let t = 0; t < 15; t++) {
+            if (Math.abs(n - c3) >= minGap) break;
             n = Math.floor(Math.random() * 80);
         }
         c3 = n;
+        // 先彻底淡出旧图片
         imgs[2].style.opacity = '0';
+        // 等200ms让旧图片完全消失
         setTimeout(function() {
-            imgs[2].src = pics[c3];
-            imgs[2].style.opacity = '1';
-        }, 300);
+            // 预加载新图片
+            var preImg = new Image();
+            preImg.src = pics[c3];
+            // 新图片加载完后才显示
+            preImg.onload = function() {
+                imgs[2].src = pics[c3];
+                imgs[2].style.opacity = '1';
+            };
+            // 兜底：1.5秒后强制显示
+            setTimeout(function() {
+                imgs[2].src = pics[c3];
+                imgs[2].style.opacity = '1';
+            }, 1500);
+        }, 200);
     }, 12000);
     
     // ========== 第4张 ==========
-    let c4 = 60;
+    let c4 = 45;
     imgs[3].src = pics[c4];
     setInterval(function() {
+        let minGap = 25 + Math.floor(Math.random() * 30);
         let n = Math.floor(Math.random() * 80);
-        for (let t = 0; t < 10; t++) {
-            if (Math.abs(n - c4) >= 12) break;
+        for (let t = 0; t < 15; t++) {
+            if (Math.abs(n - c4) >= minGap) break;
             n = Math.floor(Math.random() * 80);
         }
         c4 = n;
+        // 先彻底淡出旧图片
         imgs[3].style.opacity = '0';
+        // 等200ms让旧图片完全消失
         setTimeout(function() {
-            imgs[3].src = pics[c4];
-            imgs[3].style.opacity = '1';
-        }, 300);
+            // 预加载新图片
+            var preImg = new Image();
+            preImg.src = pics[c4];
+            // 新图片加载完后才显示
+            preImg.onload = function() {
+                imgs[3].src = pics[c4];
+                imgs[3].style.opacity = '1';
+            };
+            // 兜底：1.5秒后强制显示
+            setTimeout(function() {
+                imgs[3].src = pics[c4];
+                imgs[3].style.opacity = '1';
+            }, 1500);
+        }, 200);
     }, 13000);
     
     // ========== 第5张 ==========
-    let c5 = 10;
+    let c5 = 60;
     imgs[4].src = pics[c5];
     setInterval(function() {
+        let minGap = 25 + Math.floor(Math.random() * 30);
         let n = Math.floor(Math.random() * 80);
-        for (let t = 0; t < 10; t++) {
-            if (Math.abs(n - c5) >= 12) break;
+        for (let t = 0; t < 15; t++) {
+            if (Math.abs(n - c5) >= minGap) break;
             n = Math.floor(Math.random() * 80);
         }
         c5 = n;
+        // 先彻底淡出旧图片
         imgs[4].style.opacity = '0';
+        // 等200ms让旧图片完全消失
         setTimeout(function() {
-            imgs[4].src = pics[c5];
-            imgs[4].style.opacity = '1';
-        }, 300);
+            // 预加载新图片
+            var preImg = new Image();
+            preImg.src = pics[c5];
+            // 新图片加载完后才显示
+            preImg.onload = function() {
+                imgs[4].src = pics[c5];
+                imgs[4].style.opacity = '1';
+            };
+            // 兜底：1.5秒后强制显示
+            setTimeout(function() {
+                imgs[4].src = pics[c5];
+                imgs[4].style.opacity = '1';
+            }, 1500);
+        }, 200);
     }, 14000);
     
     // ========== 第6张 ==========
-    let c6 = 30;
+    let c6 = 75;
     imgs[5].src = pics[c6];
     setInterval(function() {
+        let minGap = 25 + Math.floor(Math.random() * 30);
         let n = Math.floor(Math.random() * 80);
-        for (let t = 0; t < 10; t++) {
-            if (Math.abs(n - c6) >= 12) break;
+        for (let t = 0; t < 15; t++) {
+            if (Math.abs(n - c6) >= minGap) break;
             n = Math.floor(Math.random() * 80);
         }
         c6 = n;
+        // 先彻底淡出旧图片
         imgs[5].style.opacity = '0';
+        // 等200ms让旧图片完全消失
         setTimeout(function() {
-            imgs[5].src = pics[c6];
-            imgs[5].style.opacity = '1';
-        }, 300);
+            // 预加载新图片
+            var preImg = new Image();
+            preImg.src = pics[c6];
+            // 新图片加载完后才显示
+            preImg.onload = function() {
+                imgs[5].src = pics[c6];
+                imgs[5].style.opacity = '1';
+            };
+            // 兜底：1.5秒后强制显示
+            setTimeout(function() {
+                imgs[5].src = pics[c6];
+                imgs[5].style.opacity = '1';
+            }, 1500);
+        }, 200);
     }, 15000);
 });
 </script>
@@ -139,7 +223,7 @@ document.addEventListener('DOMContentLoaded', function() {
     .text-primary { color: #2563eb; }
     .bg-primary { background-color: #2563eb; }
     .border-primary { border-color: #2563eb; }
-    img { transition: opacity 0.3s ease; }
+    img { transition: opacity 0.15s ease; }
 </style>
 </head>
 <body class="scroll-smooth font-sans">
@@ -242,102 +326,186 @@ document.addEventListener('DOMContentLoaded', function() {
     let c1 = 0;
     imgs[0].src = pics[c1];
     setInterval(function() {
+        let minGap = 25 + Math.floor(Math.random() * 30);
         let n = Math.floor(Math.random() * 80);
-        for (let t = 0; t < 10; t++) {
-            if (Math.abs(n - c1) >= 12) break;
+        for (let t = 0; t < 15; t++) {
+            if (Math.abs(n - c1) >= minGap) break;
             n = Math.floor(Math.random() * 80);
         }
         c1 = n;
+        // 先彻底淡出旧图片
         imgs[0].style.opacity = '0';
+        // 等200ms让旧图片完全消失
         setTimeout(function() {
-            imgs[0].src = pics[c1];
-            imgs[0].style.opacity = '1';
-        }, 300);
+            // 预加载新图片
+            var preImg = new Image();
+            preImg.src = pics[c1];
+            // 新图片加载完后才显示
+            preImg.onload = function() {
+                imgs[0].src = pics[c1];
+                imgs[0].style.opacity = '1';
+            };
+            // 兜底：1.5秒后强制显示
+            setTimeout(function() {
+                imgs[0].src = pics[c1];
+                imgs[0].style.opacity = '1';
+            }, 1500);
+        }, 200);
     }, 10000);
     
     // ========== 第2张 ==========
-    let c2 = 20;
+    let c2 = 15;
     imgs[1].src = pics[c2];
     setInterval(function() {
+        let minGap = 25 + Math.floor(Math.random() * 30);
         let n = Math.floor(Math.random() * 80);
-        for (let t = 0; t < 10; t++) {
-            if (Math.abs(n - c2) >= 12) break;
+        for (let t = 0; t < 15; t++) {
+            if (Math.abs(n - c2) >= minGap) break;
             n = Math.floor(Math.random() * 80);
         }
         c2 = n;
+        // 先彻底淡出旧图片
         imgs[1].style.opacity = '0';
+        // 等200ms让旧图片完全消失
         setTimeout(function() {
-            imgs[1].src = pics[c2];
-            imgs[1].style.opacity = '1';
-        }, 300);
+            // 预加载新图片
+            var preImg = new Image();
+            preImg.src = pics[c2];
+            // 新图片加载完后才显示
+            preImg.onload = function() {
+                imgs[1].src = pics[c2];
+                imgs[1].style.opacity = '1';
+            };
+            // 兜底：1.5秒后强制显示
+            setTimeout(function() {
+                imgs[1].src = pics[c2];
+                imgs[1].style.opacity = '1';
+            }, 1500);
+        }, 200);
     }, 11000);
     
     // ========== 第3张 ==========
-    let c3 = 40;
+    let c3 = 30;
     imgs[2].src = pics[c3];
     setInterval(function() {
+        let minGap = 25 + Math.floor(Math.random() * 30);
         let n = Math.floor(Math.random() * 80);
-        for (let t = 0; t < 10; t++) {
-            if (Math.abs(n - c3) >= 12) break;
+        for (let t = 0; t < 15; t++) {
+            if (Math.abs(n - c3) >= minGap) break;
             n = Math.floor(Math.random() * 80);
         }
         c3 = n;
+        // 先彻底淡出旧图片
         imgs[2].style.opacity = '0';
+        // 等200ms让旧图片完全消失
         setTimeout(function() {
-            imgs[2].src = pics[c3];
-            imgs[2].style.opacity = '1';
-        }, 300);
+            // 预加载新图片
+            var preImg = new Image();
+            preImg.src = pics[c3];
+            // 新图片加载完后才显示
+            preImg.onload = function() {
+                imgs[2].src = pics[c3];
+                imgs[2].style.opacity = '1';
+            };
+            // 兜底：1.5秒后强制显示
+            setTimeout(function() {
+                imgs[2].src = pics[c3];
+                imgs[2].style.opacity = '1';
+            }, 1500);
+        }, 200);
     }, 12000);
     
     // ========== 第4张 ==========
-    let c4 = 60;
+    let c4 = 45;
     imgs[3].src = pics[c4];
     setInterval(function() {
+        let minGap = 25 + Math.floor(Math.random() * 30);
         let n = Math.floor(Math.random() * 80);
-        for (let t = 0; t < 10; t++) {
-            if (Math.abs(n - c4) >= 12) break;
+        for (let t = 0; t < 15; t++) {
+            if (Math.abs(n - c4) >= minGap) break;
             n = Math.floor(Math.random() * 80);
         }
         c4 = n;
+        // 先彻底淡出旧图片
         imgs[3].style.opacity = '0';
+        // 等200ms让旧图片完全消失
         setTimeout(function() {
-            imgs[3].src = pics[c4];
-            imgs[3].style.opacity = '1';
-        }, 300);
+            // 预加载新图片
+            var preImg = new Image();
+            preImg.src = pics[c4];
+            // 新图片加载完后才显示
+            preImg.onload = function() {
+                imgs[3].src = pics[c4];
+                imgs[3].style.opacity = '1';
+            };
+            // 兜底：1.5秒后强制显示
+            setTimeout(function() {
+                imgs[3].src = pics[c4];
+                imgs[3].style.opacity = '1';
+            }, 1500);
+        }, 200);
     }, 13000);
     
     // ========== 第5张 ==========
-    let c5 = 10;
+    let c5 = 60;
     imgs[4].src = pics[c5];
     setInterval(function() {
+        let minGap = 25 + Math.floor(Math.random() * 30);
         let n = Math.floor(Math.random() * 80);
-        for (let t = 0; t < 10; t++) {
-            if (Math.abs(n - c5) >= 12) break;
+        for (let t = 0; t < 15; t++) {
+            if (Math.abs(n - c5) >= minGap) break;
             n = Math.floor(Math.random() * 80);
         }
         c5 = n;
+        // 先彻底淡出旧图片
         imgs[4].style.opacity = '0';
+        // 等200ms让旧图片完全消失
         setTimeout(function() {
-            imgs[4].src = pics[c5];
-            imgs[4].style.opacity = '1';
-        }, 300);
+            // 预加载新图片
+            var preImg = new Image();
+            preImg.src = pics[c5];
+            // 新图片加载完后才显示
+            preImg.onload = function() {
+                imgs[4].src = pics[c5];
+                imgs[4].style.opacity = '1';
+            };
+            // 兜底：1.5秒后强制显示
+            setTimeout(function() {
+                imgs[4].src = pics[c5];
+                imgs[4].style.opacity = '1';
+            }, 1500);
+        }, 200);
     }, 14000);
     
     // ========== 第6张 ==========
-    let c6 = 30;
+    let c6 = 75;
     imgs[5].src = pics[c6];
     setInterval(function() {
+        let minGap = 25 + Math.floor(Math.random() * 30);
         let n = Math.floor(Math.random() * 80);
-        for (let t = 0; t < 10; t++) {
-            if (Math.abs(n - c6) >= 12) break;
+        for (let t = 0; t < 15; t++) {
+            if (Math.abs(n - c6) >= minGap) break;
             n = Math.floor(Math.random() * 80);
         }
         c6 = n;
+        // 先彻底淡出旧图片
         imgs[5].style.opacity = '0';
+        // 等200ms让旧图片完全消失
         setTimeout(function() {
-            imgs[5].src = pics[c6];
-            imgs[5].style.opacity = '1';
-        }, 300);
+            // 预加载新图片
+            var preImg = new Image();
+            preImg.src = pics[c6];
+            // 新图片加载完后才显示
+            preImg.onload = function() {
+                imgs[5].src = pics[c6];
+                imgs[5].style.opacity = '1';
+            };
+            // 兜底：1.5秒后强制显示
+            setTimeout(function() {
+                imgs[5].src = pics[c6];
+                imgs[5].style.opacity = '1';
+            }, 1500);
+        }, 200);
     }, 15000);
 });
 </script>
@@ -358,102 +526,186 @@ document.addEventListener('DOMContentLoaded', function() {
     let c1 = 0;
     imgs[0].src = pics[c1];
     setInterval(function() {
+        let minGap = 25 + Math.floor(Math.random() * 30);
         let n = Math.floor(Math.random() * 80);
-        for (let t = 0; t < 10; t++) {
-            if (Math.abs(n - c1) >= 12) break;
+        for (let t = 0; t < 15; t++) {
+            if (Math.abs(n - c1) >= minGap) break;
             n = Math.floor(Math.random() * 80);
         }
         c1 = n;
+        // 先彻底淡出旧图片
         imgs[0].style.opacity = '0';
+        // 等200ms让旧图片完全消失
         setTimeout(function() {
-            imgs[0].src = pics[c1];
-            imgs[0].style.opacity = '1';
-        }, 300);
+            // 预加载新图片
+            var preImg = new Image();
+            preImg.src = pics[c1];
+            // 新图片加载完后才显示
+            preImg.onload = function() {
+                imgs[0].src = pics[c1];
+                imgs[0].style.opacity = '1';
+            };
+            // 兜底：1.5秒后强制显示
+            setTimeout(function() {
+                imgs[0].src = pics[c1];
+                imgs[0].style.opacity = '1';
+            }, 1500);
+        }, 200);
     }, 10000);
     
     // ========== 第2张 ==========
-    let c2 = 20;
+    let c2 = 15;
     imgs[1].src = pics[c2];
     setInterval(function() {
+        let minGap = 25 + Math.floor(Math.random() * 30);
         let n = Math.floor(Math.random() * 80);
-        for (let t = 0; t < 10; t++) {
-            if (Math.abs(n - c2) >= 12) break;
+        for (let t = 0; t < 15; t++) {
+            if (Math.abs(n - c2) >= minGap) break;
             n = Math.floor(Math.random() * 80);
         }
         c2 = n;
+        // 先彻底淡出旧图片
         imgs[1].style.opacity = '0';
+        // 等200ms让旧图片完全消失
         setTimeout(function() {
-            imgs[1].src = pics[c2];
-            imgs[1].style.opacity = '1';
-        }, 300);
+            // 预加载新图片
+            var preImg = new Image();
+            preImg.src = pics[c2];
+            // 新图片加载完后才显示
+            preImg.onload = function() {
+                imgs[1].src = pics[c2];
+                imgs[1].style.opacity = '1';
+            };
+            // 兜底：1.5秒后强制显示
+            setTimeout(function() {
+                imgs[1].src = pics[c2];
+                imgs[1].style.opacity = '1';
+            }, 1500);
+        }, 200);
     }, 11000);
     
     // ========== 第3张 ==========
-    let c3 = 40;
+    let c3 = 30;
     imgs[2].src = pics[c3];
     setInterval(function() {
+        let minGap = 25 + Math.floor(Math.random() * 30);
         let n = Math.floor(Math.random() * 80);
-        for (let t = 0; t < 10; t++) {
-            if (Math.abs(n - c3) >= 12) break;
+        for (let t = 0; t < 15; t++) {
+            if (Math.abs(n - c3) >= minGap) break;
             n = Math.floor(Math.random() * 80);
         }
         c3 = n;
+        // 先彻底淡出旧图片
         imgs[2].style.opacity = '0';
+        // 等200ms让旧图片完全消失
         setTimeout(function() {
-            imgs[2].src = pics[c3];
-            imgs[2].style.opacity = '1';
-        }, 300);
+            // 预加载新图片
+            var preImg = new Image();
+            preImg.src = pics[c3];
+            // 新图片加载完后才显示
+            preImg.onload = function() {
+                imgs[2].src = pics[c3];
+                imgs[2].style.opacity = '1';
+            };
+            // 兜底：1.5秒后强制显示
+            setTimeout(function() {
+                imgs[2].src = pics[c3];
+                imgs[2].style.opacity = '1';
+            }, 1500);
+        }, 200);
     }, 12000);
     
     // ========== 第4张 ==========
-    let c4 = 60;
+    let c4 = 45;
     imgs[3].src = pics[c4];
     setInterval(function() {
+        let minGap = 25 + Math.floor(Math.random() * 30);
         let n = Math.floor(Math.random() * 80);
-        for (let t = 0; t < 10; t++) {
-            if (Math.abs(n - c4) >= 12) break;
+        for (let t = 0; t < 15; t++) {
+            if (Math.abs(n - c4) >= minGap) break;
             n = Math.floor(Math.random() * 80);
         }
         c4 = n;
+        // 先彻底淡出旧图片
         imgs[3].style.opacity = '0';
+        // 等200ms让旧图片完全消失
         setTimeout(function() {
-            imgs[3].src = pics[c4];
-            imgs[3].style.opacity = '1';
-        }, 300);
+            // 预加载新图片
+            var preImg = new Image();
+            preImg.src = pics[c4];
+            // 新图片加载完后才显示
+            preImg.onload = function() {
+                imgs[3].src = pics[c4];
+                imgs[3].style.opacity = '1';
+            };
+            // 兜底：1.5秒后强制显示
+            setTimeout(function() {
+                imgs[3].src = pics[c4];
+                imgs[3].style.opacity = '1';
+            }, 1500);
+        }, 200);
     }, 13000);
     
     // ========== 第5张 ==========
-    let c5 = 10;
+    let c5 = 60;
     imgs[4].src = pics[c5];
     setInterval(function() {
+        let minGap = 25 + Math.floor(Math.random() * 30);
         let n = Math.floor(Math.random() * 80);
-        for (let t = 0; t < 10; t++) {
-            if (Math.abs(n - c5) >= 12) break;
+        for (let t = 0; t < 15; t++) {
+            if (Math.abs(n - c5) >= minGap) break;
             n = Math.floor(Math.random() * 80);
         }
         c5 = n;
+        // 先彻底淡出旧图片
         imgs[4].style.opacity = '0';
+        // 等200ms让旧图片完全消失
         setTimeout(function() {
-            imgs[4].src = pics[c5];
-            imgs[4].style.opacity = '1';
-        }, 300);
+            // 预加载新图片
+            var preImg = new Image();
+            preImg.src = pics[c5];
+            // 新图片加载完后才显示
+            preImg.onload = function() {
+                imgs[4].src = pics[c5];
+                imgs[4].style.opacity = '1';
+            };
+            // 兜底：1.5秒后强制显示
+            setTimeout(function() {
+                imgs[4].src = pics[c5];
+                imgs[4].style.opacity = '1';
+            }, 1500);
+        }, 200);
     }, 14000);
     
     // ========== 第6张 ==========
-    let c6 = 30;
+    let c6 = 75;
     imgs[5].src = pics[c6];
     setInterval(function() {
+        let minGap = 25 + Math.floor(Math.random() * 30);
         let n = Math.floor(Math.random() * 80);
-        for (let t = 0; t < 10; t++) {
-            if (Math.abs(n - c6) >= 12) break;
+        for (let t = 0; t < 15; t++) {
+            if (Math.abs(n - c6) >= minGap) break;
             n = Math.floor(Math.random() * 80);
         }
         c6 = n;
+        // 先彻底淡出旧图片
         imgs[5].style.opacity = '0';
+        // 等200ms让旧图片完全消失
         setTimeout(function() {
-            imgs[5].src = pics[c6];
-            imgs[5].style.opacity = '1';
-        }, 300);
+            // 预加载新图片
+            var preImg = new Image();
+            preImg.src = pics[c6];
+            // 新图片加载完后才显示
+            preImg.onload = function() {
+                imgs[5].src = pics[c6];
+                imgs[5].style.opacity = '1';
+            };
+            // 兜底：1.5秒后强制显示
+            setTimeout(function() {
+                imgs[5].src = pics[c6];
+                imgs[5].style.opacity = '1';
+            }, 1500);
+        }, 200);
     }, 15000);
 });
 </script>
